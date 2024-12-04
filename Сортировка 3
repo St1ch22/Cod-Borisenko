@@ -1,0 +1,20 @@
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n):
+        for j in range(0, n-i-1):
+            if arr[j] > arr[j+1]:
+                arr[j], arr[j+1] = arr[j+1], arr[j]
+
+def main():
+    numbers = input("Введите числа, разделенные пробелами: ")
+    # Преобразуем введенные строки в список чисел
+    number_list = [int(num) for num in numbers.split()]
+    
+    print("Исходный список:", number_list)
+    
+    bubble_sort(number_list)
+    
+    print("Отсортированный список:", number_list)
+
+if __name__ == "__main__":
+    main()
